@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <!--
+        This meta tag is used to automatically redirect the user to another page.
+        The 'http-equiv="refresh"' attribute tells the browser to refresh the page.
+        The 'content' attribute specifies the delay in seconds before the redirection
+        and the URL to which the user will be redirected.
+        In this example, the user will be redirected to 'https://www.example.com' after 3 seconds.
+    -->
+    <meta http-equiv="refresh" content="3;url=https://www.google.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #616161;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .loading-dots span {
+            width: 12px;
+            height: 12px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+        .loading-dots span:nth-child(3) { animation-delay: 0s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #217dbb;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting you now...</h1>
+        <p>If you are not redirected automatically, please click the link below.</p>
+        <div class="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <p class="mt-8">
+            <a href="https://vesselverse.vercel.app/" class="text-blue-500 hover:underline">Click here to go to VesselVerse</a>
+        </p>
+    </div>
+
+    <script>
+        // You can also use JavaScript for redirection,
+        // which gives you more control (e.g., dynamic URLs, conditional redirects).
+        // This example shows a simple JavaScript redirect after 3 seconds,
+        // which matches the meta tag's functionality.
+        // Uncomment the lines below to use JavaScript redirection instead of meta tag.
+
+        // setTimeout(function() {
+        //     window.location.href = "https://www.google.com";
+        // }, 3000); // Redirect after 3 seconds
+    </script>
+</body>
+</html>
